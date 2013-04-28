@@ -8,48 +8,13 @@
 				 body{
 						padding: 15px;
 				 }
-/*
-				 select, 
-				 textarea, 
-				 input[type="text"], 
-				 input[type="password"], 
-				 input[type="datetime"], 
-				 input[type="datetime-local"], 
-				 input[type="date"], 
-				 input[type="month"], 
-				 input[type="time"], 
-				 input[type="week"], 
-				 input[type="number"], 
-				 input[type="email"], 
-				 input[type="url"], 
-				 input[type="search"], 
-				 input[type="tel"], 
-				 input[type="color"], 
-				 .uneditable-input	{
-						height: 30px;
-				 }
-*/
 			</style>
 			<script src="bootstrap-file.js"></script>
 			<script>
-				 (function($) {
-
-						$.fn.file = function() {
-							 $(this).each(function() {
-									var text = $(this).data('text') ? $(this).data('text') : 'Selecione um arquivo';
-									var classe = $(this).data('class') ? $(this).data('class') : 'input-large';
-									$(this).filestyle({
-										 buttonText: text,
-										 classText: classe,
-										 icon: true
-									});
-							 });
-						}
-
-				 })(jQuery);
-
 				 $(document).ready(function() {
-						$(':file').file();
+						$(':file').myfile({
+							 classText: 'input-xxlarge'
+						});
 						
 						$('#desabilitar').click(function(){
 							 $(':input').not(':button[id]').attr('disabled',true);
@@ -57,10 +22,15 @@
 						});
 						
 						$('#habilitar').click(function(){
-							 //$(':input').attr('disabled',0);
 							 $(':input').attr('disabled',false);
 							 $(':file').trigger('enable');
-						});						
+						});		
+						$('#limpar').click(function(){
+							 $(':file').trigger('clear');
+						});
+						$('#ver_valor').click(function(){
+							 alert($(':file').val());
+						})
 				 });
 			</script>
 	 </head>
@@ -72,22 +42,19 @@
 							 <input type="text" id="nome" placeholder="Nome">
 						</div>
 				 </div>
-				 <div class="control-group">
+				 <div class="control-group input-append">
 						<label class="control-label" for="inputPassword">Foto</label>
 						<div class="controls">
 							 <input type="file" data-class="input-xxlarge">
 						</div>
-				 </div>					
-				 <div class="control-group">
-						<label class="control-label" for="inputPassword">Foto</label>
-						<div class="controls">
-							 
-						</div>
-				 </div>							 
+				 </div>											 
 				 <div class="control-group">
 						<button type="button" id="desabilitar">Desabilitar</button>
 						<button type="button" id="habilitar">Habilitar</button>
+						<button type="button" id="limpar">Limpar</button>
+						<button type="button" id="ver_valor">Ver valor</button>
 				 </div>						
 			</form>					
 	 </body>
 </html>
+</div>
