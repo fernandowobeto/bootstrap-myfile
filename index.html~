@@ -9,7 +9,7 @@
 						padding: 15px;
 				 }
 			</style>
-			<script src="bootstrap-myfile.js"></script>
+			<script src="bootstrap-file.js"></script>
 			<script>
 				 $(document).ready(function() {
 						$(':file').myfile({
