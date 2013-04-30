@@ -11,9 +11,8 @@
 				 var $this = $(this);
 				 if($this.data('myfile')){
 						$this.trigger(options);
-				 }else{
-						return;
 				 }				 
+				 return;
 			}			
 			var defaults = {
 				 buttonText: 'Escolha um arquivo',
