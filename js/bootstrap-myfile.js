@@ -3,9 +3,18 @@
  * https://github.com/fernandowobeto/bootstrap-file
  * Copyright (c) 2013 Fernando Wobeto; Licensed MIT 
  */
+
 (function($) {
 	 'use strict';
 	 $.fn.myfile = function(options) {
+			if(typeof options == 'string'){				 
+				 var $this = $(this);
+				 if($this.data('myfile')){
+						$this.trigger(options);
+				 }else{
+						return;
+				 }				 
+			}			
 			var defaults = {
 				 buttonText: 'Escolha um arquivo',
 				 textField: true,
@@ -17,6 +26,12 @@
 			options = $.extend(defaults, options);
 			return this.each(function() {
 				 var $this = $(this);
+				 
+				 if($this.data('myfile'))
+						return;
+				 
+				 $this.data('myfile',true);				 
+				 
 				 $this.css('display', 'none');
 				 if (options.textField) {
 						var text = $('<div>').addClass('btn uneditable-input disabled').css('text-align', 'left');
