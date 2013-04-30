@@ -5,6 +5,7 @@
 			<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 			<meta name="description" content="jQuery MyFile para Bootstrap : plugin e estilização de campos file utilizando jquery e bootstrap" />
 			<script src="js/jquery.js"></script>
+			<script src="js/bootstrap-myfile.js"></script>
 			<script src="js/js.js"></script>
 			<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 			<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -82,14 +83,14 @@
 	 </head>
 	 <body>
 			<div class="container">
-
 				 <div class="masthead">
 						<h3 class="muted">jQuery MyFile Bootstrap</h3>
-						<div class="navbar span3 pull-right">
+						<div class="navbar span6 pull-right">
 							 <div class="navbar-inner">
 									<div class="container">
 										 <ul class="nav">
 												<li><a href="https://github.com/fernandowobeto/bootstrap-myfile/zipball/master" target="_blank">Download</a></li>
+												<li><a href="https://github.com/fernandowobeto/bootstrap-myfile" target="_blank">Projeto no Github</a></li>
 												<li><a href="http://www.fernandowobeto.com" target="_blank">Autor Blog</a></li>
 										 </ul>												
 									</div>
@@ -196,21 +197,59 @@
 				 <hr>
 				 <div>
 						<h3>Exemplos</h3>
-				 </div>				 
-				 <div class="well">
-						<p>
-							 <input type="file" id="file1">
-						</p>
-						<p>
-							 <input type="file" id="file2">
-						</p>
-						<p>
-							 <input type="file" id="file3">
-						</p>
 				 </div>
+				 <form class="form-horizontal well">
+						<fieldset>
+							 <div class="control-group">
+									<label class="control-label" for="input01">Original Browser</label>
+									<div class="controls">
+										 <input type="file" class="input-xlarge">
+									</div>
+							 </div>
+							 <div class="control-group input-append">
+									<label class="control-label" for="input01">Estilo default</label>
+									<div class="controls">
+										 <input type="file" class="input-xlarge" id="input1">
+									</div>
+							 </div>
+							 <div class="control-group input-append">
+									<label class="control-label" for="input02">Texto do botão</label>
+									<div class="controls">
+										 <input type="file" class="input-xlarge" id="input2">
+									</div>
+							 </div>
+							 <div class="control-group">
+									<label class="control-label" for="input03">Sem campo text</label>
+									<div class="controls">
+										 <input type="file" class="input-xlarge" id="input3">
+									</div>
+							 </div>
+							 <div class="control-group input-append">
+									<label class="control-label" for="input04">Classe do botão alterado</label>
+									<div class="controls">
+										 <input type="file" class="input-xlarge" id="input4">
+									</div>
+							 </div>
+							 <div class="control-group input-append">
+									<label class="control-label" for="input05">Ícone alterado</label>
+									<div class="controls">
+										 <input type="file" class="input-xlarge" id="input5">
+									</div>
+							 </div>
+						</fieldset>
+				 </form>
 				 <hr>
+				 <div>
+						<h3>Reporte de Bugs</h3>
+				 </div>		
+				 <div>
+						<p>
+							 <a href="mailto:contato@fernandowobeto.com">contato@fernandowobeto.com</a>
+						</p>
+				 </div>		
+				 <hr>				 
 				 <div class="footer">
-						<p>jQuery MyFile Bootstrap - 2013</p>
+						<p>jQuery MyFile Bootstrap - 2013 - Desenvolvido por Fernando Wobeto</p>
 				 </div>
 			</div>
 	 </body>
