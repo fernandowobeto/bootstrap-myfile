@@ -18,15 +18,15 @@
 						
 						$('#desabilitar').click(function(){
 							 $(':input').not(':button[id]').attr('disabled',true);
-							 $(':file').trigger('disable');
+							 $(':file').myfile('disable');
 						});
 						
 						$('#habilitar').click(function(){
 							 $(':input').attr('disabled',false);
-							 $(':file').trigger('enable');
+							 $(':file').myfile('enable');
 						});		
 						$('#limpar').click(function(){
-							 $(':file').trigger('clear');
+							 $(':file').myfile('clear');
 						});
 						$('#ver_valor').click(function(){
 							 alert($(':file').val());
