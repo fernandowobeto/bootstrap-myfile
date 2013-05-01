@@ -82,6 +82,16 @@
 		</style>
 	</head>
 	<body>
+	 <div id="fb-root"></div>
+	 <script>
+			(function(d, s, id) {
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) return;
+		 js = d.createElement(s); js.id = id;
+		 js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+		 fjs.parentNode.insertBefore(js, fjs);
+	 }(document, 'script', 'facebook-jssdk'));
+	 </script>		 
 		<div class="container">
 			<div class="masthead">
 				<h3 class="muted">jQuery MyFile Bootstrap</h3>
@@ -102,6 +112,15 @@
 				<h1>jQuery MyFile Bootstrap</h1>
 				<p class="lead">Estilização e eventos para o elemento file do HTML.</p>
 				<a class="btn btn-large btn-success" href="https://github.com/fernandowobeto/bootstrap-myfile/zipball/master" target="_blank">Download (3.1kb)</a>
+			</div>
+			<div>
+				 <div class="span2">
+						<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				 </div>
+				 <div class="span4">
+						<div class="fb-like" data-href="http://fernandowobeto.github.io/bootstrap-myfile" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+				 </div>				 
 			</div>
 			<hr>
 			<!-- Example row of columns -->
